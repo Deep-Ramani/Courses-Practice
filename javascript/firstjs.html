@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/myfirst.js"></script>
+
+    <!-- Javascript display properties 
+    
+        javscript has a four different properties.
+
+        1)innerhtml->writing into a html element using the innerhtml.
+        2)document.write() -> writing into a html output using document.write().
+        3)window.alert() -> used to display the alert message
+        4)console.log() -> used to display the message in console
+
+    
+    -->
+    <script>
+
+        // using the innerhtml
+        function myfunction(){
+            document.getElementById("demo").innerHTML="This paragraph changed using the internal javscript";
+        }
+        // using the alert method
+        function myfunction1() {
+            window.alert("Hello");
+        }
+        // usiing the console.log
+        console.log(5+6);
+
+        //using the document.write() method
+
+        document.write("Hello")
+    </script>
+
+
+</head>
+<body>
+    <p id="demo">This is the example</p>
+    <button type="button" onclick="myfunction()">Click me to change the Paragraph</button>
+
+    <button onclick="myfunction1()">click me to see the alert message</button>
+</body> 
+</html>

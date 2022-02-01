@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- how to include javascript
+    
+    There are generally main three ways to include javascript
+
+        1)Embedding code
+        2)Inline code
+        3)External file
+
+
+        1)Embedding code:-
+            To add the JavaScript code into the HTML pages, we can use the <script>.....</script> tag of the HTML that wrap around JavaScript code inside the HTML program. Users can also define JavaScript code in the <body> tag (or we can say body section) or <head> tag because it completely depends on the structure of the web page that the users use.
+
+        2) Inline Code:-
+            Generally, this method is used when we have to call a function in the HTML event attributes. There are many cases (or events) in which we have to add JavaScript code directly eg., OnMover event, OnClick, etc.
+        
+        3) External File;-
+            
+    
+    
+    
+    -->
+    <!-- javascript keyword 
+        javascript keyword are used to identify the action performed using the javascript.
+
+        Keyword 	Description
+        var 	    Declares a variable
+        let 	    Declares a block variable
+        const 	    Declares a block constant
+        if 	        Marks a block of statements to be executed on a condition
+        switch  	Marks a block of statements to be executed in different cases
+        for 	    Marks a block of statements to be executed in a loop
+        function 	Declares a function
+        return 	    Exits a function
+        try 	    Implements error handling to a block of statements
+    
+    -->
+
+
+
+    <!-- Variable 
+    
+    variable are conatiner for storing the data.
+    -->
+
+    <!-- There are 4 ways to declare the variable
+    
+        using var
+        using let
+        using const
+        using nothing
+
+
+        var keyword is a used to define the variable as a global scope
+
+        let keyword is used to define the variable as a local scope
+
+        const keyword is used for the particular constant value that we can not change that value further.
+
+        in const keyword we cannot reassigned value.
+
+        Use const when you declare:
+
+            A new Array
+            A new Object
+            A new Function
+            A new RegExp
+
+            The keyword const is a little misleading.
+
+                It does not define a constant value. It defines a constant reference to a value.
+
+                Because of this you can NOT:
+
+                    Reassign a constant value
+                    Reassign a constant array
+                    Reassign a constant object
+
+                    But you CAN:
+                    Change the elements of constant array
+                    Change the properties of constant object
+
+            Constant Arrays
+
+            You can change the elements of a constant array:
+
+            / You can create a constant array:
+                const cars = ["Saab", "Volvo", "BMW"];
+
+                // You can change an element:
+                cars[0] = "Toyota";
+
+                // You can add an element:
+                cars.push("Audi");
+
+                But you can NOT reassign the array:
+
+                 const cars = ["Saab", "Volvo", "BMW"];
+
+                cars = ["Toyota", "Volvo", "Audi"];    // ERROR 
+
+
+                Constant Objects
+
+                You can change the properties of a constant object:
+
+                // You can create a const object:
+                const car = {type:"Fiat", model:"500", color:"white"};
+
+                // You can change a property:
+                car.color = "red";
+
+                // You can add a property:
+                car.owner = "Johnson"; 
+                    
+
+                But you can NOT reassign the object:
+
+                 const car = {type:"Fiat", model:"500", color:"white"};
+
+                car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR 
+
+                Block Scope
+
+                    Declaring a variable with const is similar to let when it comes to Block Scope.
+
+                    The x declared in the block, in this example, is not the same as the x declared outside the block:
+
+                    Redeclaring an existing var or let variable to const, in the same scope, is not allowed:
+
+                    var x = 2;     // Allowed
+                    const x = 2;   // Not allowed
+
+                    {
+                    let x = 2;     // Allowed
+                    const x = 2;   // Not allowed
+                    }
+
+                    {
+                    const x = 2;   // Allowed
+                    const x = 2;   // Not allowed
+
+
+                    Reassigning an existing const variable, in the same scope, is not allowed:
+
+                    const x = 2;     // Allowed
+                    x = 2;           // Not allowed
+                    var x = 2;       // Not allowed
+                    let x = 2;       // Not allowed
+                    const x = 2;     // Not allowed
+
+                    {
+                    const x = 2;   // Allowed
+                    x = 2;         // Not allowed
+                    var x = 2;     // Not allowed
+                    let x = 2;     // Not allowed
+                    const x = 2;   // Not allowed
+
+                    Redeclaring a variable with const, in another scope, or in another block, is allowed:
+
+
+                    const x = 2;       // Allowed
+
+                    {
+                    const x = 3;   // Allowed
+                    }
+
+                    {
+                    const x = 4;   // Allowed
+                    } 
+}
+}
+    
+                -->
+</body>
+</html>
