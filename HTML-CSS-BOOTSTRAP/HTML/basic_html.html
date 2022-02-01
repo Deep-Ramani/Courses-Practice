@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Some basic Information about html</title>
+</head>
+<body>
+
+    <!-- Heading tag h1 to h6-->
+    <h1>This is heading h1</h1>
+
+    <!-- Some tags -->
+    <p>This is the example of paragraph tag</p>
+    <!-- Html links -->
+    <a href="www.google.com">Google</a>
+
+    <img src="https://www.glassdoor.co.in/Photos/Simform-Office-Photos-E777484.htm" alt="Simfrom" width="200px" height="200px">
+    <pre>This is the example of pre tag
+        Pre tag conatians white space 
+        while p tag does't contain white space
+    </pre>
+
+
+    <!-- Text formatting -->
+
+    <p>This <b>bold text</b> <i>Italic tag</i> <sub>Subscript</sub> <sup>Superscript</sup>  <strong>Strong tag</strong><mark>Mark tag</mark><small>Small tag</small><del>Deleted tag</del><ins>Inserted tag</ins></p>
+
+    <!-- Quotation tag -->
+
+    <address>
+        Written by John Doe.<br> 
+        Visit us at:<br>
+        Example.com<br>
+        Box 564, Disneyland<br>
+        USA
+        </address>
+
+        <!-- <cite>the cite tag define the title of the creative documnet</cite> -->
+        <p><cite>The dog</cite>image is available</p>
+
+        <!-- bdo stands for bi-directional override the bdo tag is used to override the current text direction -->
+        <bd>This is the example of the bdo tag</bd>
+    
+
+        <!-- Imagess -->
+
+        <!-- Image Map  this tag is used to clickable area of the image
+         The <map> tag define an image map
+             <area> tag define the diffrent area that is clickble when we click that area then we redirect the particular object.
+                    
+        -->
+
+        <img src="images/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+        <map name="workmap">
+          <area shape="rect" coords="34,44,270,350" alt="Computer" href="#">
+          <area shape="rect" coords="290,172,333,250" alt="Phone" href="#">
+          <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="#">
+        </map>
+        
+        
+<figure>
+    <img src="images/coffeehouse2.jpg" alt="Trulli" style="width:50%">
+    <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+  </figure>
+    
+  <p>Click the button to get your coordinates.</p>
+
+  <button onclick="getLocation()">Try It</button>
+  
+  <p id="demo"></p>
+  
+  <script>
+  var x = document.getElementById("demo");
+  
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+      x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+  
+  function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+  }
+  </script>
+  
+    </body> 
+</html>

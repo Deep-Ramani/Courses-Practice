@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML API</title>
+
+    <style>
+      #div1,
+      #div2 {
+        float: left;
+        width: 100px;
+        height: 35px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- MAP using the html api 
+    Geolocation
+
+    The getcurrentpostion() method is used to return the user's positon.
+
+
+    
+    -->
+    <p>Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = document.getElementById("demo");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+    </script>
+    <!-- 
+
+
+    Check if Geolocation is supported
+    If supported, run the getCurrentPosition() method. If not, display a message to the user
+    If the getCurrentPosition() method is successful, it returns a coordinates object to the function specified in the parameter (showPosition)
+    The showPosition() function outputs the Latitude and Longitude
+
+     -->
+
+    <!-- Drag and drop -->
+
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+    </script>
+
+    <h2>Drag and Drop</h2>
+    <p>Drag the image back and forth between the two div elements.</p>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img
+        src="img_w3slogo.gif"
+        draggable="true"
+        ondragstart="drag(event)"
+        id="drag1"
+        width="88"
+        height="31"
+      />
+    </div>
+
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <!-- Web storage 
+    
+    The web storage in html is used to store data localy within the user browser
+    Before HTML5, application data had to be stored in cookies, included in every server request. Web storage is more secure, and large amounts of data can be stored locally, without affecting website performance.
+    
+        Html web storage provides the two objects for storing the data on the client
+
+        window.localstorage   -> store the data with the no expiration date
+        window.sessionstorage -> store the data for one session (data is losed when the tab of the browser is closed)
+    -->
+
+    <!-- 
+        Web Workers
+
+        A web worker is a JavaScript running in the background, without affecting the performance of the page.
+        
+        When executing scripts in an HTML page, the page becomes unresponsive until the script is finished
+
+        A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.
+
+
+        Since web workers are in external files, they do not have access to the following JavaScript objects:
+
+    The window object
+    The document object
+    The parent object
+
+     -->
+
+    <!-- 
+
+        SSE -> SSE stands for server-sent Events (One way messaging)
+
+        A server-sent event is when a web page automatically gets updates from a server.
+
+        This was also possible before, but the web page would have to ask if any updates were available. With server-sent events, the updates come automatically.
+
+        Examples: Facebook/Twitter updates, stock price updates, news feeds, sport results, etc.
+      -->
+  </body>
+</html>
