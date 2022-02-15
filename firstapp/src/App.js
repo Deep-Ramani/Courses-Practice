@@ -36,20 +36,20 @@ function App(){
 
   ];
 
-    return React.createElement(
-      'div',
-      {},
-      // React.createElement('h2', {}, "Hello"), 
-      React.createElement(Expenses, {item: expense})
-    );
+    // return React.createElement(
+    //   'div',
+    //   {},
+    //   // React.createElement('h2', {}, "Hello"), 
+    //   React.createElement(Expenses, {item: expense})
+    // );
 
 
-// return(
-//   <div className='expenses'>
-//    <Expenses item={expense}/>
-//   </div>
+return(
+  <div className='expenses'>
+   <Expenses item={expense}/>
+  </div>
   
-// );
+);
 }
 
 
