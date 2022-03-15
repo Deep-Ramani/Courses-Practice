@@ -1,0 +1,7 @@
+synchronous javascript : 
+
+    in synchronous javascript task perform one by one. every task is depend on the previous task. like after complete first task then second task perform.
+
+Asynchronous javascript :
+    
+    in Asynchronous javascript task perform parallelly. like task is no dependent at any other task. in Asynchronous javascript every task can run at same time.

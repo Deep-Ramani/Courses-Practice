@@ -15,14 +15,14 @@ function App() {
     age:21
   }
 
-  const [state,setState]=useState(person)
+  // const [state,setState]=useState(person)
   
 
-  if(state.name ==="Deep"){
-    setState({...state,name:"Jay",age:22})
-  }
+  // if(state.name ==="Deep"){
+  //   setState({...state,name:"Jay",age:22})
+  // }
  
-  console.log(state);
+  // console.log(state);
 
   return (
 
