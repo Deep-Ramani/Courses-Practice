@@ -1,19 +1,14 @@
-// There are two context
+// sayHello();
 
-//1) global context
-//2) Execution context
+// function sayHello() {
+//   console.log("Hello");
+// }
 
-//Execution context
-
-//There are two rules for the execution context
-
-// Funtions declarations are scanned and made available
-// Variable declaratoins are scanned and made undefined.
-
-
-
-function sayHello() {
-    console.log("Hello");
+if (2 === "2") {
+  console.log("This is true");
 }
 
-sayHello();
+var myName = "hitesh";
+if (myName === window.myName) {
+  console.log("This is again a true statement");
+}
